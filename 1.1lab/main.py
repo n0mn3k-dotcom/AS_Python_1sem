@@ -1,6 +1,5 @@
 # Задание 6 из ЕГЭ-2025 профиль [https://math-ege.sdamgia.ru/problem?id=283063]
 # Найдите корень уравнения (x+8)**5 = 243
-python3 *lab/main.py
 
 import math
 
