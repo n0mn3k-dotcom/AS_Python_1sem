@@ -1,3 +1,6 @@
+if __name__ == "__main__":
+    pass
+
 str_1 = '41242121Abc'
 str_2 = '975293573JkRs'
 
