@@ -1,10 +1,10 @@
 if __name__ == "__main__":
     pass
 
-with open("file1.txt", "r", encoding="utf-8") as f1:
+with open("2.7file1.txt", "r", encoding="utf-8") as f1:
     lines1 = f1.readlines()
 
-with open("file2.txt", "r", encoding="utf-8") as f2:
+with open("2.7file2.txt", "r", encoding="utf-8") as f2:
     lines2 = f2.readlines()
 
 new_lines = []
@@ -16,7 +16,7 @@ for i in range(len(lines1)):
     else:
         new_lines.append(line1 + "\n")
 
-with open("file1.txt", "w", encoding="utf-8") as f1:
+with open("2.7file1.txt", "w", encoding="utf-8") as f1:
     f1.writelines(new_lines)
 
 print("Файлы объединены: ")
