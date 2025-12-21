@@ -2,11 +2,11 @@ if __name__ == "__main__":
     pass
 
 
-f1 = open("file1.txt", "r", encoding="utf-8")
+f1 = open("2.9file1.txt", "r", encoding="utf-8")
 lines1 = f1.readlines()
 f1.close()
 
-f2 = open("file2.txt", "r", encoding="utf-8")
+f2 = open("2.9file2.txt", "r", encoding="utf-8")
 lines2 = f2.readlines()
 f2.close()
 
@@ -53,7 +53,7 @@ for m in mat2:
         print(" ".join(str(x) for x in row))
     print()
 
-f2 = open("file2.txt", "w", encoding="utf-8")
+f2 = open("2.9file2.txt", "w", encoding="utf-8")
 for m in mat2:
     for row in m:
         f2.write(" ".join(str(x) for x in row) + "\n")
