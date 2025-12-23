@@ -1,31 +1,43 @@
 if __name__ == "__main__":
     pass
 
-import datetime
+# a
+name = input("Введите имя файла: ")
 
-#а)
-name = input('Введите имя файла: ')
-bad_symb = '\\/*?:"<>|'
-if any(symb in name for symb in bad_symb):
-    print('Недопустимое имя файла')
-else:
-    print('Имя файла введено корректно')
+bad_symbols = '\\/*?:"<>|'
 
-#б)
-date = input('Введите дату рождения (дд.мм.гггг): ')
+for s in bad_symbols:
+    if s in name:
+        raise Exception("Недопустимое имя файла")
+
+print("Имя файла введено корректно")
+
+#б
+
+date = input("Введите дату рождения: ")
+
 try:
-    datetime.datetime.strptime(date, "%d.%m.%Y")
-    print('Дата введена корректно')
-except ValueError:
-    print('Неверный формат даты')
+    day, month, year = date.split(".")
+    if len(day) != 2 or len(month) != 2 or len(year) != 4:
+        raise Exception
+    int(day)
+    int(month)
+    int(year)
+except:
+    raise Exception("Неверный формат даты")
 
-#в)
-xy = input('Введите координаты (x y): ').split()
-if len(xy) != 2:
-    print('Некорректные координаты')
-else:
-    try:
-        x, y = float(xy[0]), float(xy[1])
-        print('Координаты введены корректно')
-    except ValueError:
-        print('Некорректные координаты')
+print("Дата введена корректно")
+
+#в
+
+x = input("Введите координату x: ")
+y = input("Введите координату y: ")
+
+try:
+    float(x)
+    float(y)
+except:
+    raise Exception("Некорректные координаты")
+
+print("Координаты введены корректно")
+
